@@ -1,0 +1,16 @@
+pattern*/*.js
+pattern*/!jest.config.js
+pattern*/*.d.ts
+pattern*/node_modules
+pattern*/bin/lambda
+.DS_Store
+
+# CDK asset staging directory
+pattern*/.cdk.staging
+pattern*/cdk.out
+
+# Parcel default cache directory
+pattern*/.parcel-cache
+
+pattern*/.idea
+pattern*/__pycache__

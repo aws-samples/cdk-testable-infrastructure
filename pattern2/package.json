@@ -1,0 +1,34 @@
+{
+  "name": "pattern2",
+  "version": "0.1.0",
+  "bin": {
+    "pattern2": "bin/pattern2.js"
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "copy-lambda-module": "cp -R ./lambda-code/AWSTestModule/ /usr/local/microsoft/powershell/7/Modules/AWSTestModule/",
+    "package-defaults": "cd lambda-test-defaults && zip -rj ../bin/lambda/lambda-defaults-code.zip index.py && chmod 777 ../bin/lambda/lambda-defaults-code.zip && cd ..",
+    "package-networking": "zip -rj ./bin/lambda/lambda-networking-code.zip ./lambda-test-networking/index.py",
+    "package-security": "zip -rj ./bin/lambda/lambda-security-code.zip ./lambda-test-security/index.py",
+    "package-lambdas": "mkdir ./bin/lambda && npm run package-defaults && npm run package-networking && npm run package-security",
+    "synth": "npm run build && npx cdk synth",
+    "watch": "npx tsc -w",
+    "test": "jest",
+    "cdk": "npx cdk"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.5.0",
+    "@types/node": "10.17.27",
+    "@types/prettier": "2.6.0",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.4",
+    "aws-cdk": "2.25.0",
+    "ts-node": "^10.7.0",
+    "typescript": "~3.9.7"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.25.0",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21"
+  }
+}
