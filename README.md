@@ -55,7 +55,7 @@ Prerequisites:
 
 To deploy the Pattern3 stack:
 
-'''bash
+```bash
 `cd pattern3`
 `npx run build`   compile typescript to js
 `cdk synth`       emits the synthesized CloudFormation template
