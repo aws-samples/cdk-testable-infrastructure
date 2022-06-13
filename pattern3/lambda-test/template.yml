@@ -1,0 +1,16 @@
+
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: SAM Template for Layers-Demo Application
+Globals:
+    Function:
+        Timeout: 60
+
+Resources:
+    TestLambda:
+        Type: AWS::Serverless::Function
+        Properties:
+            FunctionName: TestLambda
+            CodeUri: .
+            Handler: index.handler
+            Runtime: python3.7
