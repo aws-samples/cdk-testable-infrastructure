@@ -32,7 +32,7 @@ The session walks through 3 patterns:
 ![Pattern 2 Architecture](images/Pattern2Architecture.png)
 
 ## Pattern 3: StepFunctions 
-![Pattern 3 Architecture](images/Pattern2Architecture.png)
+![Pattern 3 Architecture](images/Pattern3Architecture.png)
 
 ## Deploy
 Prerequisites:
